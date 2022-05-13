@@ -4,7 +4,7 @@ import AlgodClient from "algosdk/dist/types/src/client/v2/algod/algod";
 
 const testAlgoAddress = 'UNBYE4N7QW3U3HBEA6LNJ7WYBOF332TXOVFDML7XE2PNTZM2EMNSCL5SEU';
 const testAlgoMmenonic = 'security ten evidence soccer topic resource music lend job main jealous pet suit chair path cram economy vicious coffee stock keen violin car above because';
-const sk = algosdk.mnemonicToSecretKey(testAlgoMmenonic);
+const sk = algosdk.mnemonicToSecretKey(testAlgoMmenonic).sk;
 export async function createNFT(url: string, assetName: string, unitName: string) {
     let params = await algodClient.getTransactionParams().do();
     const client = algodClient
@@ -32,14 +32,16 @@ export async function createNFT(url: string, assetName: string, unitName: string
         suggestedParams: params,
     });
 
-    console.log("Transaction : " + txn.txID());
-    let assetID = null;
+    const rawSignedTxn = txn.signTxn(sk)
+    console.log(txn)
+    const tx = await client.sendRawTransaction(rawSignedTxn).do();
     // wait for transaction to be confirmed
-    await waitForConfirmation(client, txn.txID());
+    await waitForConfirmation(client, tx.txId);
+    console.log(tx.txId);
     // Get the new asset's information from the creator account
-    const ptx = await client.pendingTransactionInformation(txn.txID()).do();
-    assetID = ptx["asset-index"];
-    // console.log("AssetID = " + assetID);
+    const ptx = await client.pendingTransactionInformation(tx.txId).do();
+    const assetID = ptx["asset-index"];
+    console.log("AssetID = " + assetID);
 
     await printCreatedAsset(client, testAlgoAddress, assetID);
 }
