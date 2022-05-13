@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { FileUploadPage } from './FIleUpload';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { FileUploadPage } from "./components/FIleUpload";
 
 function App() {
   return (
