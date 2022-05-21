@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/frederikblockchain.github.io/NFTUploader/static/css/main.7bfafbaf.css",
-    "main.js": "/frederikblockchain.github.io/NFTUploader/static/js/main.1193bf2a.js",
-    "static/js/787.b8cd8917.chunk.js": "/frederikblockchain.github.io/NFTUploader/static/js/787.b8cd8917.chunk.js",
-    "index.html": "/frederikblockchain.github.io/NFTUploader/index.html",
-    "main.7bfafbaf.css.map": "/frederikblockchain.github.io/NFTUploader/static/css/main.7bfafbaf.css.map",
-    "main.1193bf2a.js.map": "/frederikblockchain.github.io/NFTUploader/static/js/main.1193bf2a.js.map",
-    "787.b8cd8917.chunk.js.map": "/frederikblockchain.github.io/NFTUploader/static/js/787.b8cd8917.chunk.js.map"
+    "main.css": "/freddyblockchain.github.io/NFTUploader/static/css/main.7bfafbaf.css",
+    "main.js": "/freddyblockchain.github.io/NFTUploader/static/js/main.7d5e7c6e.js",
+    "static/js/787.b8cd8917.chunk.js": "/freddyblockchain.github.io/NFTUploader/static/js/787.b8cd8917.chunk.js",
+    "index.html": "/freddyblockchain.github.io/NFTUploader/index.html",
+    "main.7bfafbaf.css.map": "/freddyblockchain.github.io/NFTUploader/static/css/main.7bfafbaf.css.map",
+    "main.7d5e7c6e.js.map": "/freddyblockchain.github.io/NFTUploader/static/js/main.7d5e7c6e.js.map",
+    "787.b8cd8917.chunk.js.map": "/freddyblockchain.github.io/NFTUploader/static/js/787.b8cd8917.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7bfafbaf.css",
-    "static/js/main.1193bf2a.js"
+    "static/js/main.7d5e7c6e.js"
   ]
 }
